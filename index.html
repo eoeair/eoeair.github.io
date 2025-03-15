@@ -69,76 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Jupyter  交互式编程样例" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/01/23/Jupyter%20%20%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%A0%B7%E4%BE%8B/" class="article-date">
-  <time class="dt-published" datetime="2025-01-23T15:00:00.000Z" itemprop="datePublished">2025-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/23/Jupyter%20%20%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%A0%B7%E4%BE%8B/">Jupyter  交互式编程样例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>以下代码均可以直接在notebook中直接运行 , 以查找素数为例</p>
-<p>C</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int isPrime(int number)</span><br><span class="line">&#123;</span><br><span class="line">	if(number &lt;= 1)</span><br><span class="line">&#123;</span><br><span class="line">		return 0 ;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=2;i*i&lt;=number;i++)</span><br><span class="line">&#123;</span><br><span class="line">		if(number%i==0)</span><br><span class="line">&#123;</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 1;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">printf(&quot;素数：\n&quot;);</span><br><span class="line">for(int i=1;i&lt;=100;i++)</span><br><span class="line">&#123;</span><br><span class="line">	if(isPrime(i))</span><br><span class="line">&#123;</span><br><span class="line">		printf(&quot;%d &quot;, i);</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>CPP</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">bool isPrime(int number)</span><br><span class="line">&#123;</span><br><span class="line">	if(number&lt;=1)</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=2;i*i&lt;=number;i++)</span><br><span class="line">&#123;</span><br><span class="line">		if(number%i==0)</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return true;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">std::cout&lt;&lt; &quot;素数：&quot;&lt;&lt;std::endl;</span><br><span class="line">for(int i=1;i&lt;=100;i++)</span><br><span class="line">&#123;</span><br><span class="line">	if(isPrime(i))</span><br><span class="line">&#123;</span><br><span class="line">		std::cout&lt;&lt;i&lt;&lt;&quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Python</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def is_prime(number):</span><br><span class="line">	if number&lt;=1:</span><br><span class="line">		return False</span><br><span class="line">	for i in range(2,int(number**0.5)+1):</span><br><span class="line">		if number%i==0:</span><br><span class="line">		return False</span><br><span class="line">	return True</span><br><span class="line"></span><br><span class="line">print(&quot;素数:&quot;)</span><br><span class="line">for i in range(1,101):</span><br><span class="line">	if is_prime(i):</span><br><span class="line">		print(i, end=&quot; &quot;)</span><br></pre></td></tr></table></figure>
-<p>Julia</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function is_prime(n)</span><br><span class="line">	if n&lt;2</span><br><span class="line">		return false</span><br><span class="line">	end</span><br><span class="line">	for i in 2:Int(floor(sqrt(n)))</span><br><span class="line">		if n%i==0</span><br><span class="line">		return false</span><br><span class="line">	end</span><br><span class="line">	end</span><br><span class="line">	return true</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">function find_primes(start,stop)</span><br><span class="line">	primes = []</span><br><span class="line">	for i in start:stop</span><br><span class="line">		if is_prime(i)</span><br><span class="line">			push!(primes,i)</span><br><span class="line">	end</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	return primes</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">result=find_primes(1,100)</span><br><span class="line">println(result)</span><br></pre></td></tr></table></figure>
-<p>R</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">is_prime &lt;- function(n)</span><br><span class="line">&#123;</span><br><span class="line">	if(n&lt;=1)</span><br><span class="line">&#123;</span><br><span class="line">		return(FALSE)</span><br><span class="line">	&#125;</span><br><span class="line">	if(n==2)</span><br><span class="line">&#123;</span><br><span class="line">		return(TRUE)</span><br><span class="line">	&#125;</span><br><span class="line">	if(n%%2==0)</span><br><span class="line">&#123;</span><br><span class="line">		return(FALSE)</span><br><span class="line">	&#125;</span><br><span class="line">	for(i in 3:ceiling(sqrt(n)))</span><br><span class="line">&#123;</span><br><span class="line">		if(n%%i==0)</span><br><span class="line">&#123;</span><br><span class="line">		return(FALSE)</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">		return(TRUE)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">for (num in 1:100)</span><br><span class="line">&#123;</span><br><span class="line">	if(is_prime(num))</span><br><span class="line">&#123;</span><br><span class="line">		print(num)</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Haskell</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">isPrime :: Int -&gt; Bool</span><br><span class="line">isPrime n</span><br><span class="line">	| n &lt;= 1 = False</span><br><span class="line">	| otherwise = not (any (\x -&gt; n `mod` x == 0 ) [ 2 ..intSqrt n])</span><br><span class="line">	where</span><br><span class="line">		intSqrt = floor. sqrt. fromIntegral</span><br><span class="line"></span><br><span class="line">primes :: [Int]</span><br><span class="line">primes = filter isPrime [ 1 .. 100 ]</span><br></pre></td></tr></table></figure>
-<p>Java</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static boolean isPrime(int number)</span><br><span class="line">&#123;</span><br><span class="line">	if(number&lt;=1)</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=2;i&lt;=Math.sqrt(number);i++)</span><br><span class="line">&#123;</span><br><span class="line">		if(number%i==0)</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return true;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">System.out.println(&quot;Prime numbers between 1 and 100:&quot;);</span><br><span class="line">for(int i=2;i&lt;=100;i++)</span><br><span class="line">&#123;</span><br><span class="line">	if(isPrime(i))</span><br><span class="line">&#123;</span><br><span class="line">		System.out.print(i+&quot; &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>JavaSript</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">function isPrime(num)</span><br><span class="line">&#123;</span><br><span class="line">	if(num&lt;2 || (num!==2 &amp;&amp; num%2===0))</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	for(let i=3;i&lt;=Math.sqrt(num);i+=2)</span><br><span class="line">&#123;</span><br><span class="line">		if(num%i===0)</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return true;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">function findPrimeNumbers()</span><br><span class="line">&#123;</span><br><span class="line">	const primes = [];</span><br><span class="line">	for (let i=2;i&lt;=100;i++)</span><br><span class="line">&#123;</span><br><span class="line">	if(isPrime(i))</span><br><span class="line">&#123;</span><br><span class="line">			primes.push(i);</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return primes;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">console.log(findPrimeNumbers());</span><br></pre></td></tr></table></figure>
-<p>Go</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import &quot;fmt&quot;</span><br><span class="line">func isPrime(num int) bool</span><br><span class="line">&#123;</span><br><span class="line">	if num&lt;2</span><br><span class="line">&#123;</span><br><span class="line">		return false</span><br><span class="line">	&#125;</span><br><span class="line">	for i:=2;i&lt;=num/2;i++</span><br><span class="line">&#123;</span><br><span class="line">		if num%i==0</span><br><span class="line">&#123;</span><br><span class="line">		return false</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return true</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">for i:=2;i&lt;=100;i++</span><br><span class="line">&#123;</span><br><span class="line">	if isPrime(i)</span><br><span class="line">&#123;</span><br><span class="line">		fmt.Println(i)</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Rust</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">fn is_prime (n: i32) -&gt; bool</span><br><span class="line">&#123;</span><br><span class="line">	if n&lt;=1</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	for i in 2..(n/2+1)</span><br><span class="line">&#123;</span><br><span class="line">		if n%i==0</span><br><span class="line">&#123;</span><br><span class="line">		return false;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	true</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">for num in 1..=100</span><br><span class="line">&#123;</span><br><span class="line">	if is_prime(num)</span><br><span class="line">&#123;</span><br><span class="line">		println!(&quot;&#123;&#125;&quot;,num);</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Kotlin</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">fun isPrime(num:Int):Boolean</span><br><span class="line">&#123;</span><br><span class="line">	if (num&lt;2)</span><br><span class="line">&#123;</span><br><span class="line">		return false</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	for(i in 2..Math.sqrt(num.toDouble()).toInt())</span><br><span class="line">&#123;</span><br><span class="line">		if(num%i==0)</span><br><span class="line">&#123;</span><br><span class="line">		return false</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return true</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">println(&quot;1到 100 内的所有素数：&quot;)</span><br><span class="line">for(i in 1..100)</span><br><span class="line">&#123;</span><br><span class="line">	if(isPrime(i))</span><br><span class="line">&#123;</span><br><span class="line">		print(&quot;$i &quot;)</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Octave</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">primeNumbers = [];</span><br><span class="line">for num=2:100</span><br><span class="line">	isPrime=true;</span><br><span class="line">	for i=2:sqrt(num)</span><br><span class="line">		if mod(num,i)==0</span><br><span class="line">			isPrime=false;</span><br><span class="line">			break;</span><br><span class="line">	end</span><br><span class="line">	end</span><br><span class="line">	if isPrime</span><br><span class="line">		primeNumbers = [primeNumbers num];</span><br><span class="line">	end</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">disp(primeNumbers);</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://eoeair.github.io/2025/01/23/Jupyter%20%20%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%A0%B7%E4%BE%8B/" data-id="cm69gu6t80000trnz3ff51dcc" data-title="Jupyter  交互式编程样例" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-公开服务列表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/01/23/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/" class="article-date">
-  <time class="dt-published" datetime="2025-01-23T14:48:00.000Z" itemprop="datePublished">2025-01-23</time>
+    <a href="/2025/03/15/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/" class="article-date">
+  <time class="dt-published" datetime="2025-03-15T07:11:00.000Z" itemprop="datePublished">2025-03-15</time>
 </a>
     
   </div>
@@ -149,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/23/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/">公开服务列表</a>
+      <a class="p-name article-title" href="/2025/03/15/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/">公开服务列表</a>
     </h1>
   
 
@@ -157,7 +91,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>本文主要介绍公开服务，迁移自eoelab群聊与频道</p>
+        <p>本文主要介绍公开服务</p>
 <h2 id="游戏服务"><a href="#游戏服务" class="headerlink" title="游戏服务"></a>游戏服务</h2><ol>
 <li>MCSM：MC、steam等游戏服务器管理平台</li>
 </ol>
@@ -201,13 +135,20 @@
 </ol>
 </li>
 </ul>
+<h2 id="存储服务"><a href="#存储服务" class="headerlink" title="存储服务"></a>存储服务</h2><ol>
+<li>AList：AList网盘</li>
+</ol>
+<ul>
+<li>访问方式：<a target="_blank" rel="noopener" href="https://eoelab.org:1031/">https://eoelab.org:1031</a></li>
+<li>使用方法：GitHub成为 eoeair成员</li>
+</ul>
 <h2 id="RUSTDESK-中继服务器"><a href="#RUSTDESK-中继服务器" class="headerlink" title="RUSTDESK 中继服务器"></a>RUSTDESK 中继服务器</h2><p>ID服务器：eoelab.org</p>
 <p>Key: G4OChznO8b8NHA5iPLuVKDQk5URpia+2NstLW8060vo&#x3D;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://eoeair.github.io/2025/01/23/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/" data-id="cm69gu6tm0002trnz8nsaajl1" data-title="公开服务列表" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://eoeair.github.io/2025/03/15/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/" data-id="cm69gu6tm0002trnz8nsaajl1" data-title="公开服务列表" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -658,7 +599,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li></ul>
     </div>
   </div>
 
@@ -671,11 +612,7 @@
       <ul>
         
           <li>
-            <a href="/2025/01/23/Jupyter%20%20%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%A0%B7%E4%BE%8B/">Jupyter  交互式编程样例</a>
-          </li>
-        
-          <li>
-            <a href="/2025/01/23/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/">公开服务列表</a>
+            <a href="/2025/03/15/%E5%85%AC%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8/">公开服务列表</a>
           </li>
         
           <li>
