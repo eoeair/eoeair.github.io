@@ -1,0 +1,62 @@
+---
+.title = "公共服务目录",
+.date = @date("2025-07-20T00:00:00"),
+.author = "ben0i0d",
+.layout = "blog.shtml",
+.alternatives = [{ 
+    .name = "rss",
+    .layout = "blog.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
+
+
+目录
+1. IaaS
+2. PaaS
+3. SaaS
+
+## IaaS
+
+1. 计算设施：通过虚拟化打包的计算资源（CPU+Mem）
+    * Hypervisor（VMM）
+        * KVM：基于内核的虚拟化
+    * 操作系统层虚拟化
+        * LXC：linux容器
+    * 访问：https://eoelab.org:1024
+    * 注意：
+        1. 你必须先联系infra团队成员上传客户端证书
+        2. amd64架构主机的主机网络ip为`192.168.2.182`
+
+## PaaS
+
+由于incus支持vm、lxc、oci同层调度，k8s/potainer等平台被取消
+
+## SaaS
+
+1. 开发服务
+    * github自托管runner,挂靠在eoeair组织下
+        * 使用方法：GitHub Actions
+        * 注意：
+            1. runner分为lxc与vm,label为lxc/vm,分别编入LXC_Public，VM_Public的runner组
+            2. 注意docker-slim等任务必须使用vm提供特权内核
+            3. 同一group内的runner命名为`lxc-number`，由于github并不支持单runner并发，因此使用单机多runner并发
+            4. 默认的runner由lxc提供，由于没有需求，目前没有建立vm
+            5. runner预装podman,其余任务应在runner内的容器完成
+
+2. 计算服务
+    * Jupyterlab：
+        * 使用方法：自行拉取jupyter项目打包的镜像，可以本地运行，也可以在incus创建
+
+3. MCSM：MC、steam等游戏服务器
+    * 支持游戏类型:Minecraft（Java/基岩版，全版本支持）,steam
+    * 访问方式： 加入QQ群：945537763
+
+4. Nextcloud: 网盘
+    * 访问方式： https://eoelab.org:1025 , 使用GitHub登陆即可
+
+5. Rustdesk: 中继服务器（暂不可用）
+    * ID服务器：`eoelab.org`
+    * key：``
+
