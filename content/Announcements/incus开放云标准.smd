@@ -93,7 +93,11 @@
         1. 云存储资源中`bs`、`fs`不可跨数据中心网络使用，对象存储可以跨数据中心网络使用
         2. 节点主机名使用`Arch-Number`命名方式,`Arch`按照debian架构缩写为准，只是将`amd64`简写为`x64`，例如`x64-1`，`aarch64-1`
 
+5. 鉴权服务器
+    * oauth2提供者规定为：GitHub。并要求具有eoeair member身份
+    * oidc提供者为：dex,一个在oauth2基础上的垫片
+    * 注意，对于IaaS,包括计算、数据、网络等基础设施当前不接入鉴权服务器
+
 ## PaaS
 
 由于incus支持vm、lxc、oci同层调度，k8s/potainer等平台被取消
-

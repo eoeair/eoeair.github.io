@@ -39,15 +39,22 @@
     * github自托管runner,挂靠在eoeair组织下
         * 使用方法：GitHub Actions
         * 注意：
-            1. runner分为lxc与vm,label为lxc/vm,分别编入LXC_Public，VM_Public的runner组
-            2. 注意docker-slim等任务必须使用vm提供特权内核
-            3. 同一group内的runner命名为`lxc-number`，由于github并不支持单runner并发，因此使用单机多runner并发
-            4. 默认的runner由lxc提供，由于没有需求，目前没有建立vm
-            5. runner预装podman,其余任务应在runner内的容器完成
+            1. runner分为lxc与vm两种运行时,label为lxc/vm,分别编入LXC_Public，VM_Public的runner组，注意docker-slim等任务必须使用vm（取决于是否需要特权内核）。
+            2. 同一group内的runner命名为`lxc-number`，由于github并不支持单runner并发，因此使用单机多runner并发
+            3. 默认的runner由lxc提供，由于没有需求，目前没有建立vm
+            4. runner预装podman与docker,其中podman用于构建容器，其余任务由docker作为内部容器的运行时完成
+    * cenv：
+        * 使用方法：自行拉取cenv项目打包的镜像，可以本地运行，也可以在incus创建
+        * 注意：
+            1. 我们要求远程开发（本地/云）都必须使用本项目来保证开发环境一致
+            2. 我们要求CI/CD或运行时都必须使用本项目来保证安全和可迭代化
+            3. gpu开发环境不再被支持,请遵守技术栈相关要求
 
 2. 计算服务
     * Jupyterlab：
         * 使用方法：自行拉取jupyter项目打包的镜像，可以本地运行，也可以在incus创建
+        * 注意：
+            1. gpu开发环境不再被支持,请遵守技术栈相关要求
 
 3. MCSM：MC、steam等游戏服务器
     * 支持游戏类型:Minecraft（Java/基岩版，全版本支持）,steam

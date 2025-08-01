@@ -1,0 +1,26 @@
+---
+.title = "培训录播视频",
+.date = @date("2025-08-02T00:00:00"),
+.author = "ben0i0d",
+.layout = "blog.shtml",
+.alternatives = [{ 
+    .name = "rss",
+    .layout = "blog.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
+## 入门培训
+1. linux入门：https://meeting.tencent.com/crm/2ybbBDgO2d
+2. VScode Devcontainer(容器定义环境)： https://meeting.tencent.com/crm/lvd3GoD285
+3. 技术分享： https://meeting.tencent.com/crm/ldyYrxPKbc
+
+## pytorch培训
+1. DDP：https://meeting.tencent.com/v2/cloud-record/share?id=6b91aff6-aae6-405f-92e2-43dfda480947
+2. AMP：https://meeting.tencent.com/v2/cloud-record/share?id=985305ef-8e5c-4ab1-92de-27f203dbeddf
+
+## incus培训
+1. https://meeting.tencent.com/crm/NXQdvG1za0
+2. https://meeting.tencent.com/crm/2BjQqMgoea
+
+注意：incus目前要求数据使用scp上传，且对用户拒绝挂载volume权限，因此使用这部分做跳过

@@ -1,0 +1,14 @@
+---
+.title = "Blog",
+.date = @date("2025-08-02T00:00:00"),
+.author = "ben0i0d",
+.layout = "blog.shtml",
+.alternatives = [{ 
+    .name = "rss",
+    .layout = "blog.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
+
+This page lists all Blog in it.

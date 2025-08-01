@@ -19,6 +19,8 @@
       <a href="$site.page('').link()">Home</a>
        &nbsp; • &nbsp;
       <a href="$site.page('Announcements').link()">Announcements</a>
+       &nbsp; • &nbsp;
+      <a href="$site.page('Blog').link()">Blog</a>
     </nav>
     <super>
     <footer>
