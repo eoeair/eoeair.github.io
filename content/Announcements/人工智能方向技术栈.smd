@@ -11,9 +11,9 @@
 .draft = false,
 --- 
 ## 基础技术栈
-1. 系统：Debian（Gnome）
+1. 系统：Debian
     * 版本：stable
-    * 桌面：Gnome，仅根据收集的信息统计得出较kde更为稳定
+    * 桌面环境：Gnome，仅根据收集的信息统计得出较kde更为稳定
     * 系统版本可以更换到testing，但务必使用开发容器保证开发环境一致
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
@@ -23,7 +23,9 @@
     * 包括AMP
     * 可选DDP并发
 5. 内容管理工具：Git
-6. 集成开发环境: VScode（本地环境），Jupyterlab（远程环境）
+6. 集成开发环境: 
+    * VScode：通用开发
+    * Jupyterlab：多用于数据科学研究（Python/SQL/MATLAB），包括 Jupyter Notebook格式文件
 
 ## 进阶技术栈
 1. 编程语言:
