@@ -11,17 +11,11 @@
 .draft = false,
 ---
 
-# 目录
 
-- [IaaS](#IaaS)
-  
-  - [计算设施](#计算设施)
-- [SaaS](#SaaS)
-  
-  - [开发服务](#开发服务)
-  - [计算服务](#计算服务)
-  - [MCSM：MC、steam等游戏服务器](#MCSM)
-  - [网盘](#Nextcloud网盘)
+# 目录
+1. IaaS
+2. PaaS
+3. SaaS
 
 # IaaS
 
