@@ -41,8 +41,8 @@
 * github自托管runner,挂靠在eoeair组织下
   * 使用方法：GitHub Actions
   * 注意：
-    1. runner基于k3s上`Actions Runner Controller`构建，为了更好的实现零信任架构
-    2. runner `label`为`runner-set`，默认runner由此提供
+    1. runner基于k3s上`Actions Runner Controller`构建，是一个更好的零信任实现
+    2. runner `label`为`arc`，默认runner由此提供
     3. 默认启用了`Kubernetes`模式，您的作业强制要求在一个容器内运行，极少数任务可能无法执行，请与pkg团队沟通
 
   * cenv：
