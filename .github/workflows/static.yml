@@ -27,7 +27,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: lxc
+    runs-on: arc
     container:
       image: ghcr.nju.edu.cn/eoeair/cenv:zine
     steps:

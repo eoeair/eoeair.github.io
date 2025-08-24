@@ -41,10 +41,10 @@
 * github自托管runner,挂靠在eoeair组织下
   * 使用方法：GitHub Actions
   * 注意：
-    1. runner分为lxc与vm两种运行时,label为lxc/vm,分别编入LXC_Public，VM_Public的runner组，注意docker-slim等任务必须使用vm（取决于是否需要特权内核）。
-    2. 同一group内的runner命名为`lxc-number`，由于github并不支持单runner并发，因此使用单机多runner并发
-    3. 默认的runner由lxc提供，由于没有需求，目前没有建立vm
-    4. runner预装podman与docker,其中podman用于构建容器，其余任务由docker作为内部容器的运行时完成
+    1. runner基于k3s上`Actions Runner Controller`构建，为了更好的实现零信任架构
+    2. runner `label`为`runner-set`，默认runner由此提供
+    3. 默认启用了`Kubernetes`模式，您的作业强制要求在一个容器内运行，极少数任务可能无法执行，请与pkg团队沟通
+
   * cenv：
     * 使用方法：自行拉取cenv项目打包的镜像，可以本地运行，也可以在incus创建
     * 注意：
