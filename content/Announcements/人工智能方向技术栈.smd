@@ -49,7 +49,9 @@
     * Kvm建议使用incus框架
     * SDS建议使用Ceph
     * SDN建议使用ovn
-3. 边缘智能：TensorRT，onnx
+3. 边缘智能：
+    * 系统：Alpine
+    * 部署框架：TensorRT，onnx
 4. 加速器: FPGA
     * 建议使用xilinx芯片，基于zynq系列
     * 建议使用具有板上内存、Pcie连接的加速卡
