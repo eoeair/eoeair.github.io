@@ -11,10 +11,10 @@
 .draft = false,
 --- 
 ## 基础技术栈
-1. 系统：Debian
-    * 版本：stable
-    * 桌面环境：Gnome，仅根据收集的信息统计得出较kde更为稳定
-    * 系统版本可以更换到testing，但务必使用开发容器保证开发环境一致
+1. 系统：
+    * 上位机：Debian stable（Gnome）
+    * 边缘/嵌入式： Alpine stable
+    * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
 3. 环境管理：venv
@@ -50,7 +50,6 @@
     * SDS建议使用Ceph
     * SDN建议使用ovn
 3. 边缘智能：
-    * 系统：Alpine
     * 部署框架：TensorRT，onnx
 4. 加速器: FPGA
     * 建议使用xilinx芯片，基于zynq系列
