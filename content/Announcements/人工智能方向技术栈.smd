@@ -13,7 +13,7 @@
 ## 基础技术栈
 1. 系统：
     * 上位机：Debian stable（Gnome）
-    * 边缘/嵌入式： Alpine stable
+    * 边缘/嵌入式： Alpine latest(no edge)
     * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
