@@ -13,7 +13,7 @@
 ## 基础技术栈
 1. 系统：
     * 上位机：Debian stable（Gnome）
-    * 边缘/嵌入式： Alpine latest(no edge)
+    * 边缘： Alpine latest(no edge)
     * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
@@ -25,7 +25,7 @@
 5. 内容管理工具：Git
 6. 集成开发环境: 
     * VScode：通用开发
-    * Jupyterlab：多用于数据科学研究（Python/SQL/MATLAB），包括 Jupyter Notebook格式文件
+    * Jupyterlab：多用于数据科学研究（Python/SQL），包括 Jupyter Notebook格式文件
 
 ## 进阶技术栈
 1. 编程语言:
@@ -43,14 +43,12 @@
     * 使用sql语言交互，替代pandas与pyspark
 
 ## 自选方向技术栈（仅参考，无强制要求）
-1. 原型设计：MATLAB
-2. 云计算：K8s，KVM，SDS，SDN
+1. 云计算：K8s，KVM，SDS，SDN
     * K8s建议使用rancher框架
     * Kvm建议使用incus框架
     * SDS建议使用Ceph
     * SDN建议使用ovn
-3. 边缘智能：
-    * 部署框架：TensorRT，onnx
-4. 加速器: FPGA
+2. 边缘智能：TensorRT，onnx
+3. 加速器: FPGA
     * 建议使用xilinx芯片，基于zynq系列
     * 建议使用具有板上内存、Pcie连接的加速卡
