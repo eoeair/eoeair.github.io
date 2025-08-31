@@ -37,8 +37,7 @@
     * 建议对于从零开始的网络使用flax构建
     * flax使用nnx模式
     * 包括未提及的flax生态工具，例如optax、orbax
-3. 环境管理:Podman
-    * 需要VScode开发容器支持，请安装podman-docker软件包
+3. 环境管理:docker
 4. 大数据: duckdb
     * 使用sql语言交互，替代pandas与pyspark
 
