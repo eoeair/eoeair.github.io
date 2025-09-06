@@ -48,6 +48,3 @@
     * SDS建议使用Ceph
     * SDN建议使用ovn
 2. 边缘智能：TensorRT，onnx
-3. 加速器: FPGA
-    * 建议使用xilinx芯片，基于zynq系列
-    * 建议使用具有板上内存、Pcie连接的加速卡
