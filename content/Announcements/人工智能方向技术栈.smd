@@ -12,7 +12,7 @@
 --- 
 ## 基础技术栈
 1. 系统：
-    * 上位机：Debian（Gnome）
+    * 上位机：Debian stable/testing（Gnome）
     * 边缘： Alpine latest(no edge)
     * 环境一致性由开发容器保证
     * 对于Alpine场景,需要格外注意musl兼容性问题
@@ -34,13 +34,15 @@
         * 编译器规定为g++
         * 实际编译器与构建工具由项目自行规定，例如jax构建必须换为clang
     * SQL
-2. AI框架:flax/jax
+2. AI框架: flax/jax
     * 建议对于从零开始的网络使用flax构建
     * flax使用nnx模式
     * 包括未提及的flax生态工具，例如optax、orbax
-3. 环境管理:docker
+3. 环境管理: docker
 4. 大数据: duckdb
     * 使用sql语言交互，替代pandas与pyspark
+5. 数据存储：tensorstore
+    * 替代hdf5，作为大规模、高性能、分块、压缩的数据底座
 
 ## 自选方向技术栈（仅参考，无强制要求）
 1. 云计算：K8s，KVM，SDS，SDN
