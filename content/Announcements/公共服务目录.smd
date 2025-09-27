@@ -28,12 +28,6 @@
   2. 不支持跨CPU架构，目前仅支持AMD64架构
   3. amd64架构主机的主机网络ip为`192.168.2.182`
 
-
-
-# PaaS
-
-由于incus支持vm、lxc、oci同层调度，k8s/potainer等平台被取消
-
 # SaaS
 
 ## 开发服务
@@ -41,8 +35,8 @@
 * github自托管runner,挂靠在eoeair组织下
   * 使用方法：GitHub Actions
   * 注意：
-    1. runner基于k3s上`Actions Runner Controller`构建，是一个更好的零信任实现
-    2. runner `label`为`arc`，默认runner由此提供
+    1. runner基于k0s上`Actions Runner Controller`构建，是一个更好的零信任实现
+    2. runner `label`为`ORG-arc`， 例如`eoeair-arc`,`a413-arc`，默认runner由此提供
     3. 默认启用了`Kubernetes`模式，您的作业强制要求在一个容器内运行，极少数任务可能无法执行，请与pkg团队沟通
 
   * cenv：
@@ -57,8 +51,6 @@
 
 * Jupyterlab：
   * 使用方法：自行拉取jupyter项目打包的镜像，可以本地运行，也可以在incus创建
-  * 注意：
-    1. gpu开发环境不再被支持,请遵守技术栈相关要求
 
 ## MCSM
 

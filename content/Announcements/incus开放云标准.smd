@@ -114,4 +114,8 @@
 
 ## PaaS
 
-由于incus支持vm、lxc、oci同层调度，k8s/potainer等平台被取消
+由于incus支持vm、lxc、oci同层调度，k8s目前仅为支持部分任务存在，不考虑扩大
+
+1. 计算设施：基于k0s
+    * 应用容器
+        * OCI：常规oci容器
