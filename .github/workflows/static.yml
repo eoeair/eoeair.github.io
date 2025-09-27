@@ -27,9 +27,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: arc
+    runs-on: eoeair-arc
     container:
-      image: ghcr.nju.edu.cn/eoeair/cenv:zine
+      image: ghcr.io/eoeair/cenv:zine
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
