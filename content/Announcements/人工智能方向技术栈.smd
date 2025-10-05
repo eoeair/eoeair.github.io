@@ -12,8 +12,8 @@
 --- 
 ## 基础技术栈
 1. 系统：
-    * 上位机：Debian stable/testing（Gnome）
-    * 边缘： Alpine latest(no edge)
+    * 上位机：Debian testing（Gnome）
+    * 边缘： Alpine edge
     * 环境一致性由开发容器保证
     * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
