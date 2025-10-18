@@ -20,9 +20,10 @@
     * 版本：由系统自带工具链给出
 3. 环境管理：venv
     * 包管理： pip
-4. AI框架：Pytorch
-    * 包括AMP
-    * 可选DDP并发
+4. AI框架: flax/jax
+    * 建议对于从零开始的网络使用flax构建
+    * flax使用nnx模式
+    * 包括未提及的flax生态工具，例如optax、orbax
 5. 内容管理工具：Git
 6. 集成开发环境: 
     * VScode：通用开发
@@ -34,10 +35,9 @@
         * 编译器规定为g++
         * 实际编译器与构建工具由项目自行规定，例如jax构建必须换为clang
     * SQL
-2. AI框架: flax/jax
-    * 建议对于从零开始的网络使用flax构建
-    * flax使用nnx模式
-    * 包括未提及的flax生态工具，例如optax、orbax
+2. AI框架：Pytorch
+    * 包括AMP
+    * 可选DDP并发
 3. 环境管理: docker
 4. 大数据: duckdb
     * 使用sql语言交互，替代pandas与pyspark
