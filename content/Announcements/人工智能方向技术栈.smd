@@ -1,6 +1,6 @@
 ---
 .title = "人工智能方向技术栈",
-.date = @date("2025-08-02T00:00:00"),
+.date = @date("2025-10-20T12:00:00"),
 .author = "ben0i0d",
 .layout = "blog.shtml",
 .alternatives = [{ 
@@ -18,8 +18,8 @@
     * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
-3. 环境管理：venv
-    * 包管理： pip
+3. 环境管理： 
+	- 单个版本python环境管理使用python自带的venv即可
 4. AI框架: flax/jax
     * 建议对于从零开始的网络使用flax构建
     * flax使用nnx模式
@@ -38,7 +38,9 @@
 2. AI框架：Pytorch
     * 包括AMP
     * 可选DDP并发
-3. 环境管理: docker
+3. 环境管理: 
+    - 容器：docker
+    - 多版本python环境：使用uv
 4. 大数据: duckdb
     * 使用sql语言交互，替代pandas与pyspark
 5. 数据存储：tensorstore
