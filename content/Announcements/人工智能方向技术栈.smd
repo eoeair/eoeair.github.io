@@ -1,6 +1,6 @@
 ---
 .title = "人工智能方向技术栈",
-.date = @date("2025-08-02T00:00:00"),
+.date = @date("2025-10-20T12:00:00"),
 .author = "ben0i0d",
 .layout = "blog.shtml",
 .alternatives = [{ 
@@ -18,8 +18,10 @@
     * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
-3. 环境管理：venv
-    * 包管理： pip
+3. 环境管理：venv or uv
+	- 单个版本：直接使用python自带的venv即可
+	- 多个版本共存：使用uv venv
+    - 实际使用按照场景选择，python3.14t使用uv 
 4. AI框架: flax/jax
     * 建议对于从零开始的网络使用flax构建
     * flax使用nnx模式
@@ -38,7 +40,11 @@
 2. AI框架：Pytorch
     * 包括AMP
     * 可选DDP并发
-3. 环境管理: docker
+3. 环境管理: docker podman
+    - podman无需root权限，安全性更高
+    - podman更适合应用于与K8S结合的场景 
+    - docker兼容性好
+    - 实际使用按照自身情况选择
 4. 大数据: duckdb
     * 使用sql语言交互，替代pandas与pyspark
 5. 数据存储：tensorstore
