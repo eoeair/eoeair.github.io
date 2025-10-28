@@ -18,8 +18,10 @@
     * 对于Alpine场景,需要格外注意musl兼容性问题
 2. 编程语言：Python
     * 版本：由系统自带工具链给出
-3. 环境管理： 
-	- 单个版本python环境管理使用python自带的venv即可
+3. 环境管理:
+    - 容器：devcontainer
+	- 单版本python环境: venv
+    * devcontainer会使用cenv项目即可
 4. AI框架: flax/jax
     * 建议对于从零开始的网络使用flax构建
     * flax使用nnx模式
