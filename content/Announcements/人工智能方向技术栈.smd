@@ -21,7 +21,7 @@
 3. 环境管理:
     - 容器：devcontainer
 	- 单版本python环境: venv
-    * devcontainer会使用cenv项目即可
+    * devcontainer使用cenv即可, 注意更改`dev.containers.dockerPath`设置为podman
 4. AI框架: flax/jax
     * 建议对于从零开始的网络使用flax构建
     * flax使用nnx模式
@@ -41,7 +41,7 @@
     * 包括AMP
     * 可选DDP并发
 3. 环境管理: 
-    - 容器：docker
+    - 容器：podman
     - 多版本python环境：使用uv
 4. 大数据: duckdb
     * 使用sql语言交互，替代pandas与pyspark
